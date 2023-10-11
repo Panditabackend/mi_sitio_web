@@ -4,7 +4,8 @@
   "description": "mi sitio web",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -a 0.0.0.0 -p 80"
+    "start": "http-server -a 0.0.0.0 -p 80",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,15 @@
   },
   "homepage": "https://github.com/Panditabackend/mi_sitio_web#readme",
   "dependencies": {
-    "http-server": "^0.12.3",
     "bootstrap": "^5.3.2",
+    "http-server": "^0.12.3",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
