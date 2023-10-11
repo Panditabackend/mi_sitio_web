@@ -1,0 +1,23 @@
+{
+  "name": "sitio_web",
+  "version": "1.0.0",
+  "description": "mi sitio web",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panditabackend/mi_sitio_web.git"
+  },
+  "author": "Clarivel Barrios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Panditabackend/mi_sitio_web/issues"
+  },
+  "homepage": "https://github.com/Panditabackend/mi_sitio_web#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1"
+  }
+}
