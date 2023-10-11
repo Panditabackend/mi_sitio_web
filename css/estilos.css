@@ -1,0 +1,28 @@
+/* Agrega este código CSS en un archivo .css o en la sección de estilos en tu HTML */
+
+/* Estilo para el cuerpo de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo para el contenido principal */
+.container {
+    flex: 1;
+}
+
+/* Estilo personalizado para el carrusel */
+#myCarousel .carousel-inner .carousel-item img {
+    object-fit: cover;
+    height: 400px;
+    /* Ajusta la altura según tus necesidades */
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
