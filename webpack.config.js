@@ -18,6 +18,14 @@ module.exports = {
         test: /\.html$/,
         use: 'html-loader',
       },
+      {
+        test: /\.scss$/, // Busca archivos con extensión .scss
+        use: [
+          'style-loader', // Inyecta los estilos en la página
+          'css-loader', // Convierte CSS a módulos comunes
+          'sass-loader', // Compila SASS/SCSS a CSS
+        ],
+      }
     ],
   },
   plugins: [
