@@ -1,4 +1,6 @@
 // popup.js con jQuery
+import $ from 'jquery';
+
 $(document).ready(function() {
     // Obtén una referencia al formulario y al botón "Enviar"
     var form = $("form");

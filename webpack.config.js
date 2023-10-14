@@ -1,16 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    index: './src/index.html',
-    quienes_somos: './src/quienes_somos.html',
-    servicios: './src/servicios.html',
-    contactenos: './src/contactenos.html',
-    error: './src/404error.html'
+    index: './src/js/index.js',
+    quienes_somos: './src/js/quienes_somos.js',
+    servicios: './src/js/servicios.js',
+    contactenos: './src/js/contactenos.js',
+    error: './src/js/404error.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -19,16 +20,26 @@ module.exports = {
         use: 'html-loader',
       },
       {
-        test: /\.scss$/, // Busca archivos con extensión .scss
+        test: /\.scss$/,
         use: [
           'style-loader', // Inyecta los estilos en la página
+          MiniCssExtractPlugin.loader,
           'css-loader', // Convierte CSS a módulos comunes
           'sass-loader', // Compila SASS/SCSS a CSS
+           
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
         ],
       }
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
