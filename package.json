@@ -2,9 +2,8 @@
   "name": "sitio_web",
   "version": "1.0.0",
   "description": "mi sitio web",
-  "main": "index.js",
   "scripts": {
-    "start": "http-server -a 0.0.0.0 -p 80",
+    "start": "cd dist && http-server -a 0.0.0.0 -p 80",
     "build": "webpack"
   },
   "repository": {
